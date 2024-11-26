@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="output.css">
+    <style>
+      
+      /* body {
+        perspective: 800px;
+      } */
+
+      *::selection {
+        background-color: #fff;
+        color: #95c11e;
+      }
+
+        #logo {
+            height: 70px;
+        }
+
+        #main {
+            background:  rgba(0, 0, 0, 0.37);
+        }
+
+        #page1 h1::before {
+                content: 'EAT. DRINK. PLAY.';
+                position: absolute;
+                color: #000;
+                top: -6px;
+                left: -6px;
+                -webkit-text-stroke: 2px #95c11e;
+                z-index: -1;
+        }
+
+        #cursor {
+            background-color: #95c11e;
+        }
+        
+        video {
+            z-index: -1;
+        }
+
+        #scroller {
+  /* background-color: red; */
+  /* white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden; */
+}
+
+#scroller::-webkit-scrollbar {
+  display: none;
+}
+
+#scroller-in {
+  /* display: inline-block;
+  white-space: nowrap; */
+  animation-name: scroll;
+  animation-duration: 40s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; 
+}
+
+#scroller h4 {
+  /* display: inline-block;
+  font-size: 120px;
+  font-weight: 900;
+  margin-right: 20px;
+  color: #000; */
+  font-family: gilroy;
+  transition: all linear 0.3s;
+  -webkit-text-stroke: 2px #95c11e; 
+  transition: all linear 0.5s;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+card img {
+  object-fit: cover;
+}
+
+card {
+  transition:  all ease 3s linear;
+}
+
+card:hover {
+  transform: rotate3d(1,1,0,20deg);
+}
+
+#overlay {
+  transition:  ease 3s linear;
+}
+
+#green-banner {
+  background: linear-gradient(to left bottom, #119F3A, #ACE022);
+}
+
+#green-banner img{
+  width: 250px;
+}
+
+#page3 img {
+    position: absolute;
+    height: 75px;
+}
+
+#page3 #colon1 {
+  top: 25%;
+  left: 15%;
+}
+
+#page3 #colon2 {
+  bottom: 25%;
+  right: 15%;
+}
+
+#page4 h1 {
+  font-family: gilroy;
+  -webkit-text-stroke: 2px #fff;
+}
+
+#page4 #cd2 {
+  height: 70%;
+  width: 26%;
+}
+
+#page4 #cd2 img {
+  scale: 1.1;
+  transition: all 0.5s ease;
+}
+
+#page4 #cd2:hover img{
+  scale: 1;
+  /* display: block; */
+}
+
+/* #page4 #cd2:hover{
+  background-color: transparent;
+  
+} */
+
+#page4 #cd2:hover h2{
+  color: white;
+  background-color: transparent;
+}
+
+footer {
+  background: linear-gradient(to left bottom, #119F3A, #ACE022);
+}
+    </style>
+
+</head>
+<body class="h-screen w-full bg-white font-montserrat ">
+    
+    <!-- Nav Bar -->
+    <div id="nav" class="fixed z-50 h-36 w-full px-36 py-0 flex items-center justify-start  gap-11">
+
+        <img id="logo" class="" src="https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/logo-white.svg" alt="">
+        <h4 class="uppercase text-white font-medium">TOPTRACE RANGE</h4>
+        <h4 class="uppercase text-white font-medium">Golf Lessons</h4>
+        <h4 class="uppercase text-white font-medium">Adventure Golf</h4>
+        <h4 class="uppercase text-white font-medium">Coffee Shop</h4>
+        <h4 class="uppercase text-white font-medium">Leagues</h4>
+    </div>
+
+    <!-- Cursor -->
+     <div id="cursor" class="h-5 w-5 rounded-full z-50 fixed">
+     </div>
+
+     <div id="cursor-blur" class="h-[400px] w-[400px] rounded-full  fixed bg-[#95c11e2b] blur-2xl z-10">
+     </div>
+
+    <!-- Video -->
+    <video class="h-full w-full object-cover fixed " src="https://sidcup-golf-family.netlify.app/Assests/hero.mp4" autoplay loop muted></video>
+
+    <!-- Main Section -->
+    <div id="main" class="relative ">
+
+        <div id="page1" class="h-screen w-full relative flex items-center justify-center flex-col text-center z-20">
+            <h1 class="text-9xl text-white font-black relative  ">EAT. DRINK. PLAY.</h1>
+            <h2 class="text-3xl font-extrabold text-white mt-3 mb-5">WELCOME TO SIDCUP FAMILY GOLF!
+            </h2>
+            <p class="text-lg font-medium text-white w-1/3 ">Sidcup Family Golf is a multipurpose golf facility located in Sidcup, South East London. Passionate about technology, player development and making golf fun and accessible to everyone.</p>
+        </div>
+
+        <div id="page2" class="min-h-screen w-full z-0">
+            <div id="scroller" class="whitespace-nowrap overflow-x-auto overflow-y-hidden relative z-10">
+                <div id="scroller-in" class="inline-block whitespace-nowrap">
+                    <h4 class="inline-block text-[120px] font-black mr-5 text-black  hover:text-[#95c11e] ">TOPTRACER RANGE</h4>
+                    <h4 class="inline-block text-[120px] font-black mr-5 text-black  hover:text-[#95c11e] ">GOLF LESSONS</h4>
+                  <h4 class="inline-block text-[120px] font-black mr-5 text-black  hover:text-[#95c11e] ">ADVENTURE GOLF</h4>
+                  <h4 class="inline-block text-[120px] font-black mr-5 text-black  hover:text-[#95c11e] ">COFFEE SHOP</h4>
+                  <h4 class="inline-block text-[120px] font-black mr-5 text-black  hover:text-[#95c11e] ">LEAGUES</h4>
+                </div>
+                <div id="scroller-in" class="inline-block whitespace-nowrap">
+                  <h4 class="inline-block text-[120px] font-black mr-5 text-black  hover:text-[#95c11e] ">TOPTRACER RANGE</h4>
+                  <h4 class="inline-block text-[120px] font-black mr-5 text-black  hover:text-[#95c11e] ">GOLF LESSONS</h4>
+                  <h4 class="inline-block text-[120px] font-black mr-5 text-black  hover:text-[#95c11e] ">ADVENTURE GOLF</h4>
+                  <h4 class="inline-block text-[120px] font-black mr-5 text-black  hover:text-[#95c11e] ">COFFEE SHOP</h4>
+                  <h4 class="inline-block text-[120px] font-black mr-5 text-black  hover:text-[#95c11e] ">LEAGUES</h4>
+                </div>
+              </div>
+
+              <div id="about-us" class="h-2/5  w-full flex items-center justify-around text-white relative z-10">
+                <img class="w-56 h-56 object-cover rounded-lg" src="https://sidcup-golf-family.netlify.app/Assests/page2-left.avif" alt="">
+
+                <div id="about-us-in" class="w-2/5 text-center">
+                    <h3 class="font-extrabold text-5xl mb-10">About US</h3>
+                    <p class="text-xl leading-6">Sidcup Family Golf is a multipurpose golf facility located in Sidcup, South East London. Passionate about technology, player development and making golf fun and accessible to everyone.</p>
+                </div>
+
+                <img class="w-56 h-56 object-cover rounded-lg" src="https://sidcup-golf-family.netlify.app/Assests/page2-right.avif" alt="">
+
+              </div>
+
+              <div id="cards-container" class="relative z-10 h-[60vh] flex items-center justify-center gap-16">
+
+
+                <card id="card1" class="h-4/5 w-1/4 bg-blue-500 rounded-2xl relative group "><img class="rounded-2xl h-full w-full " src="https://sidcup-golf-family.netlify.app/Assests/card1.avif" alt="">
+                <div id="overlay" class="absolute bottom-0 rounded-2xl text-black h-full w-full bg-[#95C11E]  p-7 opacity-0 group-[]:hover:opacity-100 transition-opacity">
+                  <h4 class="text-black text-3xl uppercase font-semibold mb-4">TOPTRACER RANGE</h4>
+                  <p class="text-black">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit sequi eligendi ad debitis
+                    quibusdam pariatur minima blanditiis cum assumenda! Facilis?</p>
+                </div></card>
+
+                <card id="card2" class="h-4/5 w-1/4 bg-blue-500 rounded-2xl relative group"><img class="h-full w-full  rounded-2xl" src="https://sidcup-golf-family.netlify.app/Assests/card2.webp" alt="">
+  <div id="overlay" class="absolute bottom-0 rounded-2xl text-black h-full w-full bg-[#95C11E]  p-7 opacity-0 group-[]:hover:opacity-100 transition-opacity">
+    <h4 class="text-black text-3xl uppercase font-semibold mb-4">ADVENTURE GOLF</h4>
+    <p class="text-black">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit sequi eligendi ad debitis
+      quibusdam pariatur minima blanditiis cum assumenda! Facilis?</p>
+  </div>
+                </card>
+
+                <card id="card3" class="h-4/5 w-1/4 bg-blue-500 rounded-2xl relative group"><img class="rounded-2xl h-full w-full " src="https://sidcup-golf-family.netlify.app/Assests/card3.avif" alt="">
+                <div id="overlay" class="absolute bottom-0 rounded-2xl text-black   h-full w-full bg-[#95C11E]  p-7 opacity-0 group-[]:hover:opacity-100 transition-opacity">
+                  <h4 class="text-black text-3xl uppercase font-semibold mb-4">GOLF LESSONS</h4>
+                  <p class="text-black">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit sequi eligendi ad debitis
+                    quibusdam pariatur minima blanditiis cum assumenda! Facilis?</p>
+                </div></card>
+
+
+
+
+              </div>
+
+              <div id="green-banner" class="h-[30vh] flex justify-between items-center overflow-hidden">
+                <img  src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/dots-side.svg" alt="">
+
+               <h4 class="font-semibold text-2xl text-center w-1/2 leading-8">SIGN UP FOR SIDCUP NEWS AND SPECIAL OFFERS
+                STRAIGHT TO YOUR INBOX</h4>
+
+                <img src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/dots-side.svg" alt="">
+              </div>
+
+
+        </div>
+
+
+        <div id="page3" class="relative  h-screen w-full bg-black flex items-center justify-center">
+          <img id="colon1" class="z-20 absolute top-0" src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/quote-left.svg" alt="">
+
+          <p class="text-3xl font-bold w-2/4 leading-10  text-center text-white z-20">I absolutely love the adventure golf here. It seems every time I come they’ve added a new feature. My mum
+            and I usually come together and it’s such a laugh. The designs for the holes are creative and the two
+            different courses makes it more fun as you can complete both and compare your scores!
+          </p>
+
+
+          <img id="colon2" class=" z-20" src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/quote-right.svg" alt="">
+        </div>
+
+
+        <div id="page4" class="relative flex items-center justify-evenly h-[30vh] w-full">
+          <h1 class="uppercase text-black text-8xl absolute z-0 top-3">What are you waiting for?</h1>
+
+          <div id="cd2" class="relative  flex justify-center items-center rounded-3xl  overflow-hidden">
+            <h2 class="absolute flex justify-center items-center  h-full w-full text-4xl font-semibold bg-[#95c11e] z-10">TOPTRACER</h2>
+            <img class="object-cover h-full w-full rounded-3xl" src="https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/page-toptracer.jpg?strip=all&lossy=1&sharp=1&ssl=1" alt="">
+          </div>
+
+          <div id="cd2" class="relative flex justify-center items-center rounded-3xl    overflow-hidden">
+            <h2 class="absolute w-full h-full flex justify-center items-center bg-[#95c11e] text-4xl font-semibold z-10">GOLF LESSONS</h2>
+            <img class="h-full w-full rounded-3xl object-cover" src="https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/page-lessons.jpg?strip=all&lossy=1&sharp=1&ssl=1" alt="">
+          </div>
+
+
+          <div id="cd2" class="relative  flex justify-center items-center rounded-3xl overflow-hidden">
+            <h2 class="absolute w-full h-full flex items-center justify-center text-4xl font-semibold bg-[#95c11e] z-10">ADVENTURE</h2>
+            <img class="h-full w-full rounded-3xl object-cover" src="https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/page-ag.jpg?strip=all&lossy=1&sharp=1&ssl=1" alt="">
+          </div>
+        </div>
+
+        <footer class="h-[40vh] w-full relative flex justify-center items-center gap-x-20 overflow-hidden">
+          <img class="h-80 absolute left-0" src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/dots-footer.svg" alt="">
+          <div id="section1" class="absolute top-24 left-24">
+            <img class="h-24" src="https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/logo-white.svg" alt="">
+          </div>
+          <div id="section2" class=" uppercase text-2xl font-semibold  ">
+            <h3>TOPTRACER Ranges</h3>
+            <h3>Golf Lessons</h3>
+            <h3>Adventure Golf</h3>
+          </div>
+          <div id="section3" class="uppercase text-2xl font-semibold">
+            <h3>coffee shop</h3>
+            <h3>LEAGUES</h3>
+            <h3>Contact us</h3>
+          </div>
+          <div id="section4" class="uppercase font-semibold leading-5" >
+            <h4>A20, SIDCUP BYPASS</h4>
+            <h4>CHISLEHURST</h4>
+            <h4>KENT</h4>
+            <h4>BR7 6RP</h4>
+            <h4>TEL: 0208 309 0181</h4>
+            <h4>GET DIRECTIONS</h4>
+          </div>
+        </footer>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="script.js"></script>
+</body>
+</html>
